@@ -22,7 +22,7 @@ int main(){
 p = new int[5];
 ```
 
-## Malloc
+## Malloc (Used only in C Language)
 Malloc is used in C Langauge to allocate memory in Heap
 
 ```c
