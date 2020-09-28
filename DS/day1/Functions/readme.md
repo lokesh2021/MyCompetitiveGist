@@ -3,6 +3,8 @@
 
 There are 3 types of parameter passing methods:
 * Pass by Value
+* Pass by Address
+*Pass by Reference
 
 ```cpp
 int add(int a, int b) //Prototype
