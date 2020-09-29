@@ -6,7 +6,9 @@
 * ### Class and Constructor in C++
 * ### Template Class :   Whenever we need same class for different uses i.e, one class for integer type values and another for floating point numbers then we can use Template class to make sure we use the same class fro different data types
 
+## Time Spent : **02:30 hrs**
 
+/
 # Class and Constructor in C++
 
 ```cpp
@@ -64,8 +66,9 @@ int main()
     cout<<r.getLength()<<"\n";   //output 20
 }
 ```
-
+\
 # Template Class
+
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
