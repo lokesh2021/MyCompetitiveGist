@@ -1,8 +1,12 @@
-# Recursion
+# **What is Recursion and How Recursion Works?**
 
 ##  A function that calls itself unless and untill a condition is satisfied.
 
-## Example 1:
+## **Recursion has two phases**
+* ### Calling Phase 
+* ### Returning Phase
+
+# **Example 1:**
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -10,7 +14,13 @@ using namespace std;
 void fun1(int n)
 {
     if(n > 0){
+
+             //executed while Calling 
+        
         cout<<n<<" ";       //output: 3 2 1
+
+             //executed while Returning 
+
         fun1(n-1);
     }
 }
@@ -34,7 +44,7 @@ int main()
                               |
                          stop recursion
 
-## Example 2:
+# **Example 2:**
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
