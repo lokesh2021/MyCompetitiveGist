@@ -4,5 +4,5 @@
 * Time Complexity of Recursion
 
 
-<img src="time_complexity_of_recursion.png" width="400">
+<img src="time_complexity_of_recursion.png" width="600">
 
