@@ -3,5 +3,6 @@
 * How recursion uses Stack.
 * Time Complexity of Recursion
 
-![Time Complexity of Recursion](time_complexity_of_recursion.png)
+
+<img src="time_complexity_of_recursion.png" width="400">
 
