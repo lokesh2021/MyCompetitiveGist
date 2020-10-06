@@ -7,7 +7,7 @@ int fun(int n)
     //  static int x=0; //Static variable
 \    if(n>0){
         x++;
-        return fun(n-1)+x;      // is called while returning call.
+        return fun(n-1)+x;      // is called while returning time.
     }
     return 0;
 }
