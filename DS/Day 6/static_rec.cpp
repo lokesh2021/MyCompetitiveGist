@@ -5,9 +5,9 @@ int x=0;        //Global variable
 int fun(int n)
 {
     //  static int x=0; //Static variable
-\    if(n>0){
+    if(n>0){
         x++;
-        return fun(n-1)+x;      // is called while returning time.
+        return fun(n-1)+x;      // is called while returning tim.
     }
     return 0;
 }
