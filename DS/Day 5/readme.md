@@ -6,3 +6,4 @@
 
 <img src="time_complexity_of_recursion.png" width="600">
 
+## Time Spent: **01:15** Hr
