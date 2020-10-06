@@ -1,5 +1,7 @@
-# Day 6
+# Day 6  
+Time Spent: **02:15hrs**
 
+## Topics Learnt:
 * ### Static and Global Variables in Recursion
 * ### Types of Recursion
 
