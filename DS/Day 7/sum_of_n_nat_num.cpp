@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int Lsum(int n)
+int Isum(int n)
 {
     int s=0;
     for(int i=1;i<=n;i++){
@@ -22,6 +22,6 @@ int Rsum(int n)
 int main()
 {
     cout<<"Recursive Sum="<<Rsum(5)<<endl;
-    cout<<"Sum Using loop ="<<Lsum(5);
+    cout<<"Sum Using loop ="<<Isum(5);
     return 0;
 }
