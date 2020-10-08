@@ -1,4 +1,4 @@
-# Types of Recursion
+# Types of Recursion (Part 1)
 
 * ### Tail Recursion
 * ### Head Recursion

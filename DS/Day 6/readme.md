@@ -3,7 +3,7 @@ Time Spent: **02:15hrs**
 
 ## Topics Learnt:
 * ### Static and Global Variables in Recursion
-* ### Types of Recursion
+* ### Types of Recursion (Part 1)
 
 
 
