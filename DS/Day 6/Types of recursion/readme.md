@@ -3,8 +3,8 @@
 * ### Tail Recursion
 * ### Head Recursion
 * ### Tree Recursion
-* ### Indirect Recursion
-* ### Nested Recursion
+* ### Indirect Recursion (Cont. **Day7**)
+* ### Nested Recursion  (Cont. **Day7**)
 
 
 ## **Tail Recursion**
