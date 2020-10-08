@@ -26,24 +26,17 @@ void fubB(int n)
 ```
 
 ## **Nested Recursion**
-Recursive Functions inside another Recursive Functions is known as **Indirect Recursion**.
+Recursive Functions inside another Recursive Functions is known as **Nested Recursion**.
 
 ```cpp
-void funA(int n)
+void fun(int n)
 {
-    if(n>0){
-        cout<<n;
-        funB(n-1);  //Indirect Recursion
-    }
-}
-void fubB(int n)
-{
-    if(n>1){
-        cout<<n;
-        funA(n/2);
-    }
+    if(n>100)
+        cout<<n-10;
+    else    
+        return fun(fun(n+11));  //Nested Recursion
 }
 
-//  Output : 20, 19, 9, 8, 4, 3, 1 
+//  Output : 91 
 
 ```
