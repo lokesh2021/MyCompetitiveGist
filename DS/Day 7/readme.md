@@ -1,4 +1,5 @@
 # Day 7
+## Time Spent: **2:20hrs**
 # Topics Learnt:
 * # Types of Recursion (Part 2)
     * ## Indirect Recursion
@@ -15,5 +16,5 @@ fact(n-1)*n
 ```
 pow(m,n-1)*m
 
-better time complexity : if n=even then pow(m*m,n/2) else m*pow(m*m,(n-1)/2)
+Better time complexity : if n=even then pow(m*m,n/2) else m*pow(m*m,(n-1)/2)
 ```
