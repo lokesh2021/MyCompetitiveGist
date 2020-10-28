@@ -2,5 +2,6 @@
     "files.associations": {
         "iostream": "cpp"
     },
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "python.dataScience.jupyterServerURI": "local"
 }
