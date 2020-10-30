@@ -20,3 +20,6 @@ n”. It also known as worst case time complexity as it denotes the upper bound 
 g of n”. It also known as best case time complexity as it denotes the lower bound in which algorithm terminates.
 
 3. **θ-notation:** It is used to denote the average time of a program.
+
+# Resources: 
+https://www.youtube.com/watch?v=rq_rwnveh8s&list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ&index=17
