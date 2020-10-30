@@ -46,8 +46,8 @@ double hornersi(int x, int n)
 
 int main()
 {
-    cout<<"normal: "<<taylor(3,10)<<endl;     //output : 5
-    cout<<"Taylor Series Horner’s Rule using Recursion: "<<horners(3,10)<<endl;     //output : 5
-    cout<<"Taylor Series Horner’s Rule using Iteration: "<<hornersi(3,10)<<endl;     //output : 5
+    cout<<"normal: "<<taylor(3,10)<<endl; 
+    cout<<"Taylor Series Horner’s Rule using Recursion: "<<horners(3,10)<<endl;     
+    cout<<"Taylor Series Horner’s Rule using Iteration: "<<hornersi(3,10)<<endl;     
     return 0;
 }
