@@ -6,13 +6,13 @@ int main()
     cin>>n;
     for(int i=1;i<=n;i++){
         for(int j=1;j<=n-i;j++){
-                cout<<" ";
+                cout<<"  ";
             }
         for(int j=i;j>0;j--){
-            cout<<j;
+            cout<<j<<" ";
         }
         for(int j=2;j<=i;j++){
-            cout<<j;
+            cout<<j<<" ";
         }
         cout<<endl;
     }
@@ -20,8 +20,8 @@ int main()
 }
 
 // Output:
-//     1
-//    212
-//   32123
-//  4321234
-// 543212345
+//         1 
+//       2 1 2 
+//     3 2 1 2 3 
+//   4 3 2 1 2 3 4 
+// 5 4 3 2 1 2 3 4 5
