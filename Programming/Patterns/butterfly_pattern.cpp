@@ -12,19 +12,19 @@ int main()
     {
         for(j=n ; j>=i ; j--)
         {
-            cout<<"*";
+            cout<<"* ";
         }
         
         s = i * 2 - 2;
         while(s>=0)
         {
-            cout<<" ";
+            cout<<"  ";
             s--;
         }
         
         for(j=i ; j<=n ; j++)
         {
-            cout<<"*";
+            cout<<"* ";
         }
         
         cout<<"\n";
@@ -34,12 +34,12 @@ int main()
 	//Middle line of butterfly start
     for(i=n ; i>=0 ; i--)
     {
-        cout<<"*";
+        cout<<"* ";
     }
     
     for(i=1 ; i<=n ; i++)
     {
-        cout<<"*";
+        cout<<"* ";
     }
     
     cout<<"\n";
@@ -50,19 +50,19 @@ int main()
     {
         for(j=n ; j>=i ; j--)
         {
-            cout<<"*";
+            cout<<"* ";
         }
         
         s = i * 2 - 2;
         while(s>=0)
         {
-            cout<<" ";
+            cout<<"  ";
             s--;
         }
         
         for(j=i ; j<=n ; j++)
         {
-            cout<<"*";
+            cout<<"* ";
         }
         
         cout<<"\n";
@@ -71,3 +71,13 @@ int main()
 
     return 0;
 }
+// Output:
+// *               * 
+// * *           * * 
+// * * *       * * * 
+// * * * *   * * * * 
+// * * * * * * * * * 
+// * * * *   * * * * 
+// * * *       * * * 
+// * *           * * 
+// *               *
