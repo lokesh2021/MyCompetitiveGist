@@ -21,4 +21,5 @@ int main()
     
 }
 
-//Input:153
+//Input: 153
+//Output: It's an Armstrong Number
