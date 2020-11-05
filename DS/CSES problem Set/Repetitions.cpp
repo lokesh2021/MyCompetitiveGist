@@ -3,25 +3,30 @@
 using namespace std;
 int main()
 {
-    int a=0,c=0,g=0,t=0;
     string s;
-    vector<int> val;
+    char c=s[0];
+    vector<int> vi={1};
     cin>>s;
+    int count = 1;
     for(int i=0;i<s.length();i++){
-        int count = 0;
-        for(int j=i;j<s.length();j++){
-            while(s[j]==s[j+1]){
-                count++;
-j++;
-            }
-            cout<<count<<endl;
+        if((s[i]==s[i+1])){
+            count++;
+            vi.push_back(count);
+            
+        }
+        else
+        {
+            c=s[i+1];
+            count=1;
         }
         
     }
-    cout<<a<<" "<<c<<" "<<g<<" "<<t<<" ";
-    int ans = max({a,c,g,t});
-    cout<<ans;
+    
+    cout<<*max_element(vi.begin(),vi.end());
 }
 
 // Input:ATTCGGGA
 // Output:3
+
+//TimeComplexity: O(n)
+//SpaceComplexity: 6n+5
