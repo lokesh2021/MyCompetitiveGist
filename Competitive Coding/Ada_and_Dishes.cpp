@@ -1,37 +1,40 @@
-#include<iostream>
-#include<vector>
-#include<algorithm>
+#include<bits/stdc++.h>
 using namespace std;
-int main()
-{
-    ios_base::sync_with_stdio(false);cin.tie(NULL);
-     long long int t;
-     cin>>t;
-     while(t--){
-         long long int n;
-         int t1=0,t2=0,count=0,i=0;
-         cin>>n;
-         vector<int> v;
-         for(int i=0; i<n; i++){
-             int r;
-             cin>>r;
-             v.push_back(r);
-         }
-         sort(v.begin(),v.end(),greater<int>());
-         while(count<n){
-             if(t2<t1)
-               t2 += v[i];
-            else
-               t1 += v[i];
-               i++;
-         count++;
-         }
-         if (t1>=t2)
-            cout<<t1<<endl;
-        else
-            cout<<t2<<endl;
-     }
-    
-    return 0;
-}
 
+void sol()
+{
+   int n;
+  cin>>n;
+  vector<int>v(n);
+  for(int i=0;i<n;i++) cin>>v[i];
+  sort(v.begin(),v.end(),greater<int>());
+  if(n==1) cout<<v[0]<<endl;
+  if(n==2) cout<<v[0]<<endl;
+  if(n==3)
+    {
+    int sum=v[1];
+    int diff=v[0]-v[1];
+    sum+=max(diff,v[2]);
+    cout<<sum<<endl;
+     }
+ if(n==4)
+    {
+     int sum=v[1];
+     int diff=v[0]-v[1];
+     sum+=min(diff,v[2]);
+     int diff1=abs(v[2]-diff);
+     sum+=max(v[3],diff1);
+     cout<<sum<<endl;
+        }
+ }
+ 
+int main() 
+{ 
+    ios_base::sync_with_stdio(false);cin.tie(NULL);
+    int t=1;
+    cin>>t; 
+    while(t--) { 
+        sol();
+    } 
+    return 0;
+} 
