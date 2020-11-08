@@ -10,20 +10,23 @@ int main()
     int t=1;
     cin>>t; 
     while(t--) { 
-        int n,k,sum=0;
+        int n,k,sum=0,j=0;
         cin>>n>>k;
         int arr[n];
         for(int i=0;i<n;i++) cin>>arr[i];
         for(int i=0;i<n;i++){
-            if(sum=0){
-                cout<<i<<endl;
+            sum-=k;
+            sum+=arr[i];
+            j+=1;
+            if(sum<0)
+                break;
+            else
+            {
+                j+=sum/k+1;
             }
-            else{
-                sum=arr[i]-k;
-                cout<<i<<endl;
-            }
+
         }
-        cout<<endl;
+        cout<<j<<endl;
         
     } 
     return 0;
