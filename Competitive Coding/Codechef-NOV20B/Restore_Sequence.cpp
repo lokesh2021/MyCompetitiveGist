@@ -2,24 +2,65 @@
 
 #include<bits/stdc++.h>
 using namespace std;
-#define prime(L,R) int flag;vector<int> pr;  for (int i = L; i <= R; i++) { if (i == 1 || i == 0) continue; flag = 1; for (int j = 2; j <= i / 2; ++j) { if (i % j == 0) { flag = 0; break; } } if (flag == 1) pr.push_back(i); } 
-
-int main() 
-{ 
+/*
+    Lokesh B M
+*/
+int main()
+{
     ios_base::sync_with_stdio(false);cin.tie(NULL);
-    prime(1,10000);
-    
-    int t=1;
-    cin>>t; 
-    while(t--) { 
-        int n;
+    int T;
+    cin>>T;
+    while(T--)
+    {
+        int n,j=1;
         cin>>n;
-        vector<int>v(n);
-        for(int i=0;i<n;i++) cin>>v[i];
-        for(auto i=v.begin();i<v.end();i++){
-            cout<<pr[*i-1]<<" ";
+        int b[100000];
+        for(int i=1;i<=n;i++)
+        {
+            cin>>b[i];
         }
-        cout<<endl;
-    } 
+        int a[100000];
+        int status = 1, num = 2, count, c;
+       if (n>= 1)
+       {
+          a[1]=2;
+       }
+
+       for (count = 1; count <=n; )
+       {
+          for (c = 2; c <= (int)sqrt(num); c++)
+          {
+             if (num%c == 0)
+             {
+                status = 0;
+                break;
+             }
+          }
+          if (status != 0)
+          {
+             a[j]=num;
+             count++;
+             j++;
+          }
+          status = 1;
+          num++;
+       }
+       int arr[100000];
+       for(int i=1;i<=n;i++)
+       {
+           if(i==b[i])
+           {
+               arr[i]=a[i];
+           }
+           else
+           {
+               arr[i]=a[b[i]];
+           }
+
+           cout<<arr[i]<<" ";
+       }
+
+            cout<<endl;
+    }
     return 0;
-} 
+}
