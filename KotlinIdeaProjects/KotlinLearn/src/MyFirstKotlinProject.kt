@@ -44,10 +44,42 @@ fun main(args : Array<String>)
 
 
 //Control Flow Statements
-    var num :Int = 40
+    /*var num :Int = 40
     var num1:Int = 20
+
     if(num>num1)
-        println(num)
+        println(num)*/
+
+    /*for(i in 1..5)
+        println(i)*/
+
+    /*var n:Int =0;
+    while(n<4)
+    {
+        println(n)
+        n++
+    }*/
+
+
+ //when (Switch Statement in Kotlin)
+    var x:Int=20
+    /*when(x){
+        0,1 -> println("x=0 or x=1")
+        else -> println("otherwise")
+    }*/
+
+    /*when(x){
+        in 1..10 -> println("X is in the range")
+        !in 10..20 -> print("X not in range")
+        else -> println("none of the above")
+    }*/
+
+    when(x){
+        1 -> println("one")
+        2 -> println("Two")
+        3 -> println("Three")
+        else -> println("not accesible")
+    }
 
 
 
