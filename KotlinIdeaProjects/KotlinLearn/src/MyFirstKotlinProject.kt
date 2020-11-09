@@ -62,7 +62,7 @@ fun main(args : Array<String>)
 
 
  //when (Switch Statement in Kotlin)
-    var x:Int=20
+//    var x:Int=20
     /*when(x){
         0,1 -> println("x=0 or x=1")
         else -> println("otherwise")
@@ -74,13 +74,16 @@ fun main(args : Array<String>)
         else -> println("none of the above")
     }*/
 
-    when(x){
+    /*when(x){
         1 -> println("one")
         2 -> println("Two")
         3 -> println("Three")
         else -> println("not accesible")
-    }
+    }*/
 
+
+//Jump Statements
+    
 
 
 
