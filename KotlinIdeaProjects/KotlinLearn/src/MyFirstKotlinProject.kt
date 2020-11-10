@@ -83,6 +83,16 @@ fun main(args : Array<String>)
 
 
 //Jump Statements
+    /*for( i in 1..4){
+        if(i==2){
+            continue
+        }else
+            if (i==4){
+            break
+        }
+        println("x=$i")
+
+    }*/
     
 
 
