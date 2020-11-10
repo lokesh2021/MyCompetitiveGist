@@ -82,6 +82,7 @@ fun main(args : Array<String>)
     }*/
 
 
+
 //Jump Statements
     /*for( i in 1..4){
         if(i==2){
@@ -93,11 +94,16 @@ fun main(args : Array<String>)
         println("x=$i")
 
     }*/
-    
 
 
+//Funtions
+
+    func()
 
 
+}
 
-
+fun func () {
+    for (x in 1..5)
+        println(x)
 }
