@@ -100,11 +100,13 @@ fun main(args : Array<String>)
     add(3,5)
     var sum = sum(3,6)
     println("sum: "+sum)
-    println("sum1: "+sum1(2,3))
+    println("sub: "+sub(5,3))
 
+    var(two,three) = TwoFunct(2)
+    print("TwoFunc: 2, $two, $three")
 }
 
-fun sum1(a: Int, b: Int): Int= a+b
+fun sub(a: Int, b: Int): Int= a-b
 
 fun sum(a: Int, b: Int): Int {
     return a+b
@@ -112,4 +114,8 @@ fun sum(a: Int, b: Int): Int {
 
 fun add (a:Int, b:Int) {
      println("sum of $a and $b is : ${a+b}")
+}
+
+fun TwoFunct(num:Int): Pair<Int,Int>{
+    return Pair(num+1,num+2)
 }
