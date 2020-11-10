@@ -26,12 +26,6 @@ int main()
     int n;
     cin>>n;
     fib(n);
-    char c=255;
-    if(c>10){
-        cout<<"g";
-    }
-    else{
-        cout<<"L";
-    }
+    cout<<"Recursive Fibonacci: "<<rfib(n);
     return 0;
 }
