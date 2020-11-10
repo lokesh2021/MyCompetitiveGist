@@ -103,7 +103,7 @@ fun main(args : Array<String>)
     println("sub: "+sub(5,3))
 
     var(two,three) = TwoFunct(2)
-    print("TwoFunc: 2, $two, $three")
+    print("TwoFunc: 2, ($two, $three)")
 }
 
 fun sub(a: Int, b: Int): Int= a-b
