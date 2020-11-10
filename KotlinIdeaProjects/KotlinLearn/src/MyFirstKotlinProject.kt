@@ -97,13 +97,19 @@ fun main(args : Array<String>)
 
 
 //Funtions
-
-    func()
-
+    add(3,5)
+    var sum = sum(3,6)
+    println("sum: "+sum)
+    println("sum1: "+sum1(2,3))
 
 }
 
-fun func () {
-    for (x in 1..5)
-        println(x)
+fun sum1(a: Int, b: Int): Int= a+b
+
+fun sum(a: Int, b: Int): Int {
+    return a+b
+}
+
+fun add (a:Int, b:Int) {
+     println("sum of $a and $b is : ${a+b}")
 }
