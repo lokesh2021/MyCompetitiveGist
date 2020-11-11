@@ -3,20 +3,32 @@ using namespace std;
 
 void fib(int n)
 {
-    int n1=0,n2=1,n3,i;
-    cout<<"Normal Fibonacci: "<<"0 1 ";
-    for(i=2;i<n;++i)//loop starts from 2 because 0 and 1 are already printed    
-    {    
-        n3=n1+n2;    
-        cout<<n3<<" ";    
-        n1=n2;    
-        n2=n3;    
-    }  
+    int t1 = 0, t2 = 1, nextTerm = 0;
+    for (int i = 1; i <= n; ++i)
+    {
+        // Prints the first two terms.
+        if(i == 1)
+        {
+            cout <<" "<<t1;
+            continue;
+        }
+        if(i == 2)
+        {
+            cout << t2 << " ";
+            continue;
+        }
+        nextTerm = t1 + t2;
+        t1 = t2;
+        t2 = nextTerm;
+        
+        cout << nextTerm << " ";
+    }
 }
 
 int rfib(int n)
 {
     if(n<=1) return n;
+    cout<<n<<endl;
     return rfib(n-2)+rfib(n-1);
 }
 
