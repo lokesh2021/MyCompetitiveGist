@@ -23,13 +23,32 @@ void fib(int n)
         
         cout << nextTerm << " ";
     }
+    cout<<endl;
 }
 
 int rfib(int n)
 {
     if(n<=1) return n;
-    cout<<n<<endl;
     return rfib(n-2)+rfib(n-1);
+}
+
+int F[10];
+
+int mFib(int n){
+    if(n<=1) 
+    {
+        F[n]=n; 
+        return n;
+    }
+    else
+    {
+        if(F[n-2]==-1)
+            F[n-2]=mFib(n-2);
+        if(F[n-1]==-1)
+            F[n-1]=mFib(n-1);
+
+        return F[n-2]+F[n-1];
+    }
 }
 
 int main()
@@ -38,6 +57,10 @@ int main()
     int n;
     cin>>n;
     fib(n);
-    cout<<"Recursive Fibonacci: "<<rfib(n);
+    cout<<"Recursive Fibonacci: "<<rfib(n)<<endl;
+    for(int i=0;i<10;i++){
+        F[i]=-1;
+    }
+    cout<<"Memoisation Method: "<<mFib(10);
     return 0;
 }
