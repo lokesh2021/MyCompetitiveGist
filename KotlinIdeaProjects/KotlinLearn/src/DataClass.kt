@@ -6,3 +6,7 @@
 * */
 
 data class User(val name:String, val age: Int)
+    val Eureka = User("Lokesh",20)
+    val EdurekaCommunity = Eureka.copy(age = 23)
+
+
