@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE student_information[
+<!ELEMENT student_information (ad+)>
+<!ELEMENT ad (usn,name,college,branch,year,email)>
+<!ELEMENT usn (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT college (#PCDATA)>
+<!ELEMENT branch (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT email (#PCDATA)> ]>
+<?xml-stylesheet type="text/css" href="exp5.css"?>
+<student_information>
+<h1>First Student Information</h1>
+<ad><label>USN:</label><usn>1KS17CS001</usn></ad>
+<ad><label>NAME:</label><name>Aafreen</name></ad>
+<ad><label>COLLEGE:</label><college>KSIT</college></ad>
+<ad><label>BRANCH:</label><branch>CSE</branch></ad>
+<ad><label>YEAR:</label><year>2020</year></ad>
+<ad><label>EMAIL:</label><email>aafreen@gmail.com</email></ad>
+
+<h1>Second Student Information</h1>
+<ad><label>USN:</label><usn>1KS17CS038</usn></ad>
+<ad><label>NAME:</label><name>Lokesh</name></ad>
+<ad><label>COLLEGE:</label><college>KSIT</college></ad>
+<ad><label>BRANCH:</label><branch>CSE</branch></ad>
+<ad><label>YEAR:</label><year>2020</year></ad>
+<ad><label>EMAIL:</label><email>lokesh@gmail.com</email></ad>
+
+<h1>Third Student Information</h1>
+<ad><label>USN:</label><usn>1KS17CS003</usn></ad>
+<ad><label>NAME:</label><name>Akshatha</name></ad>
+<ad><label>COLLEGE:</label><college>KSIT</college></ad>
+<ad><label>BRANCH:</label><branch>CSE</branch></ad>
+<ad><label>YEAR:</label><year>2020</year></ad>
+<ad><label>EMAIL:</label><email>akshatha@gmail.com</email></ad>
+</student_information>
