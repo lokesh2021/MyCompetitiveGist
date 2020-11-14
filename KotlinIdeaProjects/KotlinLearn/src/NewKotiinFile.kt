@@ -1,13 +1,18 @@
 import javax.print.attribute.standard.PrinterLocation
 
 fun main(args: Array<String>) {
+/*
     println("sub= ${getData(20, 40)}")
 
     ////
-    /*Lambda Function*/
+    */
+/*Lambda Function*//*
+
     var multiply = { num1: Int, num2: Int -> num1 * num2 }
     println(multiply(15, 6))
-    /*Lambda Functions with return statements*/
+    */
+/*Lambda Functions with return statements*//*
+
     val myLambda:(Int) ->Unit ={p: Int ->
         println("Lambda Function to multiply using functions with return value: "+p)}
     Multiply(5,9,myLambda)
@@ -15,8 +20,16 @@ fun main(args: Array<String>) {
     ////
     println("5! =" + fact(5))
     //
+*/
+    
+
+}
 
 
+
+fun passFunctions(abc:()->Unit)
+{
+    abc()
 }
 
 fun Multiply (x:Int,y:Int,myLambda:(Int)->Unit){
