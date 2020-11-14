@@ -45,4 +45,5 @@ fun main(args: Array<String>) {
     val maps = mapOf<String,Int>("key1" to 2,"key2" to 4,"key3" to 6,"key4" to 8)
     println("keys: "+maps.keys)
     println("Values: "+maps.values)
+    if(1 in maps.values) println(" Value Found in maps")
 }
