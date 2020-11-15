@@ -10,6 +10,5 @@ int ncr(int n, int r)
 int main()
 {
     cout<<ncr(5,2);
-
     return 0;
 }
