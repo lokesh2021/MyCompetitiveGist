@@ -39,8 +39,20 @@ Row Major Matrix can be represented using the formula
  <img src="row_major_matrix.png" width="600">
 
 
-# **Formula for n-D arrays**
+# **Formula for n-D array using Row major**
 
-A([i_{1}])
+$$ 
+addr(A([i_{1}] [i_{2}] [i_{3}] [i_{4}])) = L_{0} + [i_{1} * d_{2} * d_{3} * d_{4} + i_{2} * d_{3} * d_{4} + i_{3} * d_{4} + i_{4}]
+$$
 
-k_{n+1}
+## General Formula:
+
+$$
+addr(A([i_{1}] [i_{2}] [i_{3}] [i_{4}])) = L_{0} + \sum_{p=1}^n [ i_{p} * \pi_{q=p+1}^n d_{q}] * w
+$$
+
+using the above formula the time complexity is O(n^2)
+
+## **More faster way** - Time Complextiy: O(n) - (using Horners Rule)
+
+ <img src="n-d_formula_faster_method.png" width="600">
