@@ -23,6 +23,7 @@
 
 ```
 
+
 # **Row & Column Major Matrix**
 
 ## **Definition:** A matrix represented in a 1D Array
@@ -39,13 +40,33 @@ Row Major Matrix can be represented using the formula
  <img src="row_major_matrix.png" width="600">
 
 
+
+
+
+
+# **Formula for 3-D Array** 
+## Using Row Major (left to right)
+
+    addr( A [ i ] [ j ] [ k ] ) = L0 + [ i * m * n + j * n + k ] * w
+
+## Using Column Major (right to left)
+    addr( A [ i ] [ j ] [ k ] ) = L0 + [ k * l * m + j * l + i ] + w
+
+
+
+
+
+
+
+
+
 # **Formula for n-D array using Row major**
 
 $$ 
 addr(A([i_{1}] [i_{2}] [i_{3}] [i_{4}])) = L_{0} + [i_{1} * d_{2} * d_{3} * d_{4} + i_{2} * d_{3} * d_{4} + i_{3} * d_{4} + i_{4}]
 $$
 
-## General Formula:
+## **General Formula:**
 
 $$
 addr(A([i_{1}] [i_{2}] [i_{3}] [i_{4}])) = L_{0} + \sum_{p=1}^n [ i_{p} * \pi_{q=p+1}^n d_{q}] * w
