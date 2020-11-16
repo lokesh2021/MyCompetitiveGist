@@ -8,10 +8,15 @@
  # How address of element in Array is Obtained by the compiler?
  ## It can be obtained by the following formula
 
-                A[n]=L0+n*T
+                    A[i]=L0+i*w
 
     where, L0 = Starting address of the Array
-           n = Element Index in Array
-           T = DataType value of that Array
+           i = Element Index in Array
+           w = DataType word size of that Array
 
     example: A[4]=200+4*2 = 208 which is the Address of A[4]
+
+
+```diff
+- Key Point: Start with index i=0 every time to save execution time for larger arrays
+```
