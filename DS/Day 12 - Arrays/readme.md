@@ -1,7 +1,7 @@
- # **Accessing 2-D Arrays Elements** using 3 Methods mentioned below
- - ## 1) Using Normal 2D Array
- - ## 2) Using One Pointer and linking it to multiple Arrays (Combination of both Pointer and Array)
- - ## 3) Using only pointers
+ # **Accessing 2-D & n-D Arrays Elements** using 3 Methods mentioned below
+ - ### 1) Using Normal 2D Array
+ - ### 2) Using One Pointer and linking it to multiple Arrays (Combination of both Pointer and Array)
+ - ### 3) Using only pointers
 
  <img src="accessing_2d_array.png" width="600">
 
@@ -18,10 +18,13 @@
 
 
 ```diff
+
 - Key Point: Start with index i=0 every time to save execution time for larger arrays
+
 ```
 
 # **Row & Column Major Matrix**
+
 ## **Definition:** A matrix represented in a 1D Array
 Row Major Matrix can be represented using the formula 
     
@@ -34,3 +37,10 @@ Row Major Matrix can be represented using the formula
     addr ( A [ i ] [ j ] ) = L0 + [ j * m + i] * w
 
  <img src="row_major_matrix.png" width="600">
+
+
+# **Formula for n-D arrays**
+
+A([i_{1}])
+
+k_{n+1}
