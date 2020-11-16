@@ -1,4 +1,5 @@
-# Arrays:
+# Arrays: 
+**Time Spent: 3 hrs**
 ## Array is Collection of Elements of the same DataTypes
 
 ## **Array Declaration:**
