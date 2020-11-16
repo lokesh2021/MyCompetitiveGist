@@ -20,3 +20,17 @@
 ```diff
 - Key Point: Start with index i=0 every time to save execution time for larger arrays
 ```
+
+# **Row & Column Major Matrix**
+## **Definition:** A matrix represented in a 1D Array
+Row Major Matrix can be represented using the formula 
+    
+### **Row Major Matrix Formula**  
+
+    addr ( A [ i ] [ j ] ) = L0 + [ i * n + j] * w
+
+### **Column Major Matrix Formula**  
+
+    addr ( A [ i ] [ j ] ) = L0 + [ j * m + i] * w
+
+ <img src="row_major_matrix.png" width="600">
