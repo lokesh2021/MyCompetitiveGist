@@ -15,7 +15,8 @@
            w = DataType word size of that Array
 
     example: A[4]=200+4*2 = 208 which is the Address of A[4]
-
+    
+ h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x
 
 ```diff
 
