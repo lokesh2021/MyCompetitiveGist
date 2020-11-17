@@ -22,7 +22,8 @@ int BinarySearch(int arr[], int n, int key)
         {
             e=mid-1;
         }
-        else{
+        else
+        {
             s=mid+1;
         }
     }
