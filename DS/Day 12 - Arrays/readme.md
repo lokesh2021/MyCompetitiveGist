@@ -15,8 +15,7 @@
            w = DataType word size of that Array
 
     example: A[4]=200+4*2 = 208 which is the Address of A[4]
-    
- h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x
+
 
 ```diff
 
@@ -63,15 +62,7 @@ Row Major Matrix can be represented using the formula
 
 # **Formula for n-D array using Row major**
 
-$$ 
-addr(A([i_{1}] [i_{2}] [i_{3}] [i_{4}])) = L_{0} + [i_{1} * d_{2} * d_{3} * d_{4} + i_{2} * d_{3} * d_{4} + i_{3} * d_{4} + i_{4}]
-$$
-
-## **General Formula:**
-
-$$
-addr(A([i_{1}] [i_{2}] [i_{3}] [i_{4}])) = L_{0} + \sum_{p=1}^n [ i_{p} * \pi_{q=p+1}^n d_{q}] * w
-$$
+ <img src="nd_formula.png" width="600">
 
 using the above formula the time complexity is O(n^2)
 
