@@ -101,8 +101,15 @@ int main()
 }
 
 // Output:
-// Enter size of array: 10
-// Enter the number of elements: 5
+// Enter size of array: 
+// Enter the number of elements: 
 // Enter Elements
-// 2 3 4 5 6 
-// Elements in array are: 2 3 4 5 6
+// Elements in array are: 
+// 2 3 4 5 7 
+// Array elements after appending are:
+// 2 3 4 5 7 9 
+// Array elements after Inserting are:
+// 2 3 4 1 5 7 9 
+// Deleted Element is: 1
+// Array elements after Deleting are:
+// 2 3 4 5 7 9
