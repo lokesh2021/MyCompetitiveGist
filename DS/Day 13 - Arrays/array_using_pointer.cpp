@@ -15,8 +15,10 @@ void Display(struct Array arr)
     {
         cout<<arr.A[i]<<" ";
     }
+    cout<<endl;
 }
 
+//Appening Elements at the end of array
 void Append(struct Array *arr,int x)
 {
     if(arr->length<arr->size)
@@ -24,13 +26,35 @@ void Append(struct Array *arr,int x)
         arr->A[arr->length++]=x;
     }
 
-    cout<<"elements after appending are:"<<endl;
+    cout<<"Array elements after appending are:"<<endl;
     for(int i=0;i<arr->length;i++)
     {
         cout<<arr->A[i]<<" ";
     }
-    
+    cout<<endl;
 }
+
+//Inserting Elements at the given Index
+void Insert(struct Array *arr,int index,int x)
+{
+    if(index>=0 && index<=arr->length)
+    {
+        for(int i=arr->length;i>index;i--)
+        {
+            arr->A[i]=arr->A[i-1];
+        }
+        arr->A[index]=x;
+        arr->length++;
+    }
+
+    cout<<"Array elements after Inserting are:"<<endl;
+    for(int i=0;i<arr->length;i++)
+    {
+        cout<<arr->A[i]<<" ";
+    }
+    cout<<endl;
+}
+
 
 int main()
 {
@@ -48,8 +72,10 @@ int main()
 
     Display(arr);
     Append(&arr,9);
+    Insert(&arr,3,1);
     return 0;
 }
+
 // Output:
 // Enter size of array: 10
 // Enter the number of elements: 5
