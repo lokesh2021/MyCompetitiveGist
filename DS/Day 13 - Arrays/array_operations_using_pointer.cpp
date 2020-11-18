@@ -34,10 +34,10 @@ void Append(struct Array *arr,int x)
     cout<<endl;
 }
 
-//Inserting Elements at the given Index
+//Inserting Element at the given Index
 void Insert(struct Array *arr,int index,int x)
 {
-    if(index>=0 && index<=arr->length)
+    if(index>=0 && index<=arr->length)  //checking whether index is in the range of array length
     {
         for(int i=arr->length;i>index;i--)
         {
@@ -56,6 +56,29 @@ void Insert(struct Array *arr,int index,int x)
 }
 
 
+//Delete Element at the given Index
+void Insert(struct Array *arr,int index)
+{
+    int x=0;
+    if(index>=0 && index<=arr->length)  //checking whether index is in the range of array length
+    {
+        x=arr->A[index];
+        for(int i=index;i<arr->length;i++)
+        {
+            arr->A[i]=arr->A[i+1];
+        }
+        arr->length--;
+    }
+
+    cout<<"Deleted Element is: "<<x<<endl;
+    cout<<"Array elements after Deleting are:"<<endl;
+    for(int i=0;i<arr->length;i++)
+    {
+        cout<<arr->A[i]<<" ";
+    }
+    cout<<endl;
+}
+
 int main()
 {
     struct Array arr;
@@ -73,6 +96,7 @@ int main()
     Display(arr);
     Append(&arr,9);
     Insert(&arr,3,1);
+    Insert(&arr,3);
     return 0;
 }
 
