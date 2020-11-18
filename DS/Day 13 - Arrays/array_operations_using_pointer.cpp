@@ -18,7 +18,7 @@ void Display(struct Array arr)
     cout<<endl;
 }
 
-//Appening Elements at the end of array
+//Append Element at the end of array
 void Append(struct Array *arr,int x)
 {
     if(arr->length<arr->size)
