@@ -129,7 +129,7 @@ void reverse2(struct Array *arr)
 void InsertInSortedArray(struct Array *arr,int x)
 {
     int i = arr->length-1;
-    while(arr->A[i]>x)
+    while(i>=0 && arr->A[i]>x)
     {
         arr->A[i+1]=arr->A[i];
         i--;
@@ -143,9 +143,30 @@ void InsertInSortedArray(struct Array *arr,int x)
         cout<<arr->A[i]<<" ";
     }
     cout<<endl;
-    
 }
 
+//Rearrange -ve and +ve elements in Array
+void Rearrange(struct Array *arr)
+{
+    int i,j;
+    i=0;
+    j=arr->length-1;
+
+    while(i<j)
+    {
+        while(arr->A[i]<0) i++;
+        while(arr->A[j]>=0)j--;
+        if(i<j) swap(&arr->A[i],&arr->A[j]);
+        cout<<i<<endl;
+    }
+    //
+    cout<<"Array elements after Rearranging -ve and +ve elements array are:"<<endl;
+    for(int i=0;i<arr->length;i++)
+    {
+        cout<<arr->A[i]<<" ";
+    }
+    cout<<endl;
+}
 
 int main()
 {
@@ -168,6 +189,7 @@ int main()
     reverse(&arr);
     reverse2(&arr);
     InsertInSortedArray(&arr,6);
+    Rearrange(&arr);
     return 0;
 }
 
