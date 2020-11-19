@@ -116,6 +116,7 @@ void reverse2(struct Array *arr)
     int i,j;
     for(i=0,j=arr->length-1;i<j;i++,j--)
         swap(&arr->A[i],&arr->A[j]);
+    //    
     cout<<"Array elements after Reversing in Efficient way are:"<<endl;
     for(int i=0;i<arr->length;i++)
     {
@@ -124,7 +125,26 @@ void reverse2(struct Array *arr)
     cout<<endl;
 }
 
-
+//Insert element in a Sorted Array
+void InsertInSortedArray(struct Array *arr,int x)
+{
+    int i = arr->length-1;
+    while(arr->A[i]>x)
+    {
+        arr->A[i+1]=arr->A[i];
+        i--;
+    }
+    arr->A[i+1]=x;
+    arr->length++;
+    //
+    cout<<"Array elements after Inserting element in sorted array are:"<<endl;
+    for(int i=0;i<arr->length;i++)
+    {
+        cout<<arr->A[i]<<" ";
+    }
+    cout<<endl;
+    
+}
 
 
 int main()
@@ -147,6 +167,7 @@ int main()
     Insert(&arr,3);
     reverse(&arr);
     reverse2(&arr);
+    InsertInSortedArray(&arr,6);
     return 0;
 }
 
