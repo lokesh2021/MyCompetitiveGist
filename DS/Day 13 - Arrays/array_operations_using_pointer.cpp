@@ -98,8 +98,34 @@ void reverse(struct Array *arr)
     {
         cout<<arr->A[i]<<" ";
     }
+    cout<<endl;
 
 }
+
+void swap(int *x,int *y)
+{
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+//Reversing an Array in Efficient Method ( TC:-O(n) )
+void reverse2(struct Array *arr)
+{
+    int i,j;
+    for(i=0,j=arr->length-1;i<j;i++,j--)
+        swap(&arr->A[i],&arr->A[j]);
+    cout<<"Array elements after Reversing in Efficient way are:"<<endl;
+    for(int i=0;i<arr->length;i++)
+    {
+        cout<<arr->A[i]<<" ";
+    }
+    cout<<endl;
+}
+
+
+
 
 int main()
 {
@@ -120,6 +146,7 @@ int main()
     Insert(&arr,3,1);
     Insert(&arr,3);
     reverse(&arr);
+    reverse2(&arr);
     return 0;
 }
 
