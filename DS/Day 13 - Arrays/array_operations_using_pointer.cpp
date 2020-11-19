@@ -79,6 +79,28 @@ void Insert(struct Array *arr,int index)
     cout<<endl;
 }
 
+//Reversing an Array in Linear Method ( TC:-O(2n) or O(n) )
+void reverse(struct Array *arr)
+{
+    int i,j;
+    int *B;
+    B = new int[arr->length];
+    for(i=arr->length-1,j=0;i>=0;i--,j++)
+    {
+        B[j]=arr->A[i];
+    }
+    for(i=0;i<arr->length;i++)
+    {
+        arr->A[i]=B[i];
+    }
+    cout<<"Array elements after Reversing are:"<<endl;
+    for(int i=0;i<arr->length;i++)
+    {
+        cout<<arr->A[i]<<" ";
+    }
+
+}
+
 int main()
 {
     struct Array arr;
@@ -97,6 +119,7 @@ int main()
     Append(&arr,9);
     Insert(&arr,3,1);
     Insert(&arr,3);
+    reverse(&arr);
     return 0;
 }
 
