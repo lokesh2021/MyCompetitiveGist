@@ -33,7 +33,8 @@ void mergeArrays(int arr1[], int arr2[], int n1,
 
 // Driver code 
 int main() 
-{ 
+{
+
 	int arr1[] = {1, 3, 5, 7}; 
 	int n1 = sizeof(arr1) / sizeof(arr1[0]); 
 
@@ -45,9 +46,9 @@ int main()
 
 	cout << "Array after merging" <<endl; 
 	for (int i=0; i < n1+n2; i++) 
-		cout << arr3[i] << " "; 
+		cout << arr3[i] << " ";
+	return 0;
 
-	return 0; 
 } 
 
 
