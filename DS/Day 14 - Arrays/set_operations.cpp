@@ -47,11 +47,7 @@ void Intersection(int arr1[], int arr2[], int n1,
 	// Traverse both array 
 	while (i<n1 && j <n2) 
 	{ 
-		// Check if current element of first 
-		// array is smaller than current element 
-		// of second array. If yes, store first 
-		// array element and increment first array 
-		// index. Otherwise do same with second array 
+ 
 		if (arr1[i] < arr2[j]) 
 			i++; 
 		else if(arr2[j] < arr1[i])
@@ -62,6 +58,38 @@ void Intersection(int arr1[], int arr2[], int n1,
             j++;
         } 
 	} 
+
+    ar3n3 = k;
+} 
+
+
+void Difference(int arr1[], int arr2[], int n1, 
+							int n2, int arr3[]) 
+{ 
+	int i = 0, j = 0, k = 0; 
+
+	// Traverse both array 
+	while (i<n1 && j <n2) 
+	{ 
+		// Check if current element of first 
+		// array is smaller than current element 
+		// of second array. If yes, store first 
+		// array element and increment first array 
+		// index. Otherwise do same with second array 
+		if (arr1[i] < arr2[j]) 
+			arr3[k++] = arr1[i++]; 
+		else if(arr2[j] < arr1[i])
+			j++;
+        else
+        {
+            i++;
+            j++;
+        } 
+	} 
+
+	// Store remaining elements of first array 
+	while (i < n1) 
+		arr3[k++] = arr1[i++]; 
 
     ar3n3 = k;
 } 
@@ -90,6 +118,14 @@ int main()
 	cout << "Array after Intersection" <<endl; 
 	for (int i=0; i < ar3n3; i++) 
 		cout << arr3[i] << " ";
+
+    cout<<endl;
+
+    Difference(arr1, arr2, n1, n2, arr3); 
+	cout << "Array after Intersection" <<endl; 
+	for (int i=0; i < ar3n3; i++) 
+		cout << arr3[i] << " ";
+
 	return 0;
 
 } 
