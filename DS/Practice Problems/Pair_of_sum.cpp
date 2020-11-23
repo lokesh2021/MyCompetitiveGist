@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//using Using Hashing
+//Using Hashing Method
 
 int main()
 {
