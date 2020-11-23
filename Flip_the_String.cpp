@@ -23,8 +23,6 @@ int main()
                 {
                     cout<<a.substr(i,i+3)<<endl;
                 }
-
         }
     }
-
 }
