@@ -71,5 +71,5 @@
     },
     "git.ignoreLimitWarning": true,
     "python.dataScience.jupyterServerURI": "local",
-    "C_Cpp.errorSquiggles": "Disabled"
+    "C_Cpp.errorSquiggles": "Enabled"
 }
