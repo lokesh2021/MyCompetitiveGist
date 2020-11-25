@@ -1,28 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
+//using swapping method
 void perm2(char s[],int l,int h)
 {
     int i;
-    if(l==h)
+    if(l==h)                    //do recursive call untill l==h and print the string
     {
         cout<<c<<"\n";
     }
     else
     {
-        for(i=l;i<h;i++)
-    {
-        swap(s[l],s[h]);
-        perm2(s,l+1,h);
-        swap(s[l],s[i]);
+        for(i=l;i<h;i++)        // 1) iterate through the string from lower index to higher index
+        {
+            swap(s[l],s[h]);    // 2) swap element at s[l] with s[h]
+            perm2(s,l+1,h);     // 3) call the resursive function with l+1
+            swap(s[l],s[i]);    // 4) swap s[l] with s[i]
+        }
     }
-    }
-
-    
 }
 
 
+//using BackTracking (which is quite tough for now)-->the other swap method is easy 
 void perm1(char s[],int k)
 {
     static int a[10] = {0};
