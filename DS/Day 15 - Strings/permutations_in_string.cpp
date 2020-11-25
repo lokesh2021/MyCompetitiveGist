@@ -54,6 +54,6 @@ int main()
 {
     char s[] = "abc";
     perm1(s,0);
-    cout<<"//";
-    perm2(s,0,2);
+    cout<<"//\n";
+    perm2(s,0,3);
 }
