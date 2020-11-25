@@ -7,19 +7,20 @@ void perm2(char s[],int l,int h)
     int i;
     if(l==h)                    //do recursive call untill l==h and print the string
     {
-        cout<<c<<"\n";
+        cout<<s<<"\n";
     }
     else
     {
-        for(i=l;i<h;i++)        // 1) iterate through the string from lower index to higher index
+        for(i=l;i<=h;i++)        // 1) iterate through the string from lower index to higher index
         {
-            swap(s[l],s[h]);    // 2) swap element at s[l] with s[h]
+            swap(s[l],s[i]);    // 2) swap element at s[l] with s[i]
             perm2(s,l+1,h);     // 3) call the resursive function with l+1
-            swap(s[l],s[i]);    // 4) swap s[l] with s[i]
+            swap(s[l],s[i]);    // 4) backtrack (restore the string to its original state)
         }
     }
 }
 
+//Course that I followed:- https://www.udemy.com/course/datastructurescncpp/learn/lecture/13554216#questions
 
 //using BackTracking (which is quite tough for now)-->the other method(swap) is easy 
 void perm1(char s[],int k)
@@ -53,4 +54,6 @@ int main()
 {
     char s[] = "abc";
     perm1(s,0);
+    cout<<"//";
+    perm2(s,0,2);
 }
