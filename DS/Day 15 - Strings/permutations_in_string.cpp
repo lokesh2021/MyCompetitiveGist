@@ -15,15 +15,15 @@ void perm(char s[],int k)
     else
     {
         for(i=0;s[i]!='\0';i++)
-    {
-        if(a[i]==0)
         {
-            res[k]=s[i];
-            a[i]=1;
-            perm(s,k+1);
-            a[i]=0;
+            if(a[i]==0)
+            {
+                res[k]=s[i];
+                a[i]=1;
+                perm(s,k+1);
+                a[i]=0;
+            }
         }
-    }
     }
     
 }
