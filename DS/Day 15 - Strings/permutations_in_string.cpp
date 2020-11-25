@@ -21,7 +21,7 @@ void perm2(char s[],int l,int h)
 }
 
 
-//using BackTracking (which is quite tough for now)-->the other swap method is easy 
+//using BackTracking (which is quite tough for now)-->the other method(swap) is easy 
 void perm1(char s[],int k)
 {
     static int a[10] = {0};
