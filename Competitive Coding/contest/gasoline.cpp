@@ -1,4 +1,3 @@
-
 #include<bits/stdc++.h>
 #define fast  ios::sync_with_stdio(false); cin.tie(0); cout.tie(0)
 #define arin(x,n) for(int i=0;i<n;i++)cin>>x[i]
@@ -10,17 +9,38 @@ using namespace std;
 
 void solve()
 {
-	int x,y,n,i,j,k,d;
-	cin>>x>>y>>n;
-	d=0;
-	for(i=0;i<=n;i++)
+	ll n;
+	cin>>n;
+	vector<pair<ll,ll>>p(n);
+	for(ll i=0;i<n;i++)
 	{
-		if((x^i)<(y^i))
-		{
-			d++;
-		}
+		cin>>p[i].second;
 	}
-	cout<<d<<"\n";
+	for(ll i=0;i<n;i++)
+	{
+		cin>>p[i].first;
+	}
+	sort(p.begin(),p.end());
+	ll e=n,h=0;
+	for(auto x:p)
+	{
+		if(x.second>=e)
+		{
+			h+= x.first*e;
+			e=0;
+		}
+		else
+		{
+			h+=x.second*x.first;
+			e-=x.second;
+		}
+		if(e<=0)
+		break;
+	}
+
+//lokesh bm
+	cout<<h<<"\n";
+
 }
 
 int main()
