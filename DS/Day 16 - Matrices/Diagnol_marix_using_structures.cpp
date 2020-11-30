@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
 struct Matrix
 {
     int A[10];
