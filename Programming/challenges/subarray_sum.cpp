@@ -12,6 +12,7 @@ int main()
             sum+=arr[j];
             cout<<sum<<endl;
         }
+        cout<<endl;
         
     }
 }
