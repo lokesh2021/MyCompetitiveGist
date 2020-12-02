@@ -1,29 +1,36 @@
-#include <iostream>
-using namespace std;
+#include <bits/stdc++.h>
+using namespace std; 
+#define ull unsigned long long
+
 int main()
 {
-    int n=6;
-    int arr[n] = {2, 4, 1, 5 ,6 ,3};
-    for (int i = 0; i < n; i++)
+  int t;
+    cin>>t;
+    while(t--)
     {
-        cin >> arr[i];
-    }
-
-    int key,j;
-    for (int i = 1; i < n; i++)
-    {   
-        key = arr[i];
-        j = i-1;
-        while(j>=0&&key<arr[j])
+        int n,arr[n];
+        cin>>n;
+        for(int i=0;i<n;i++)
         {
-            arr[j+1] = arr[j];
-            j=j-1;
+            cin>>arr[i];
         }
-        arr[j+1] = key;
-    }
-
-    for (int i = 0; i < n; i++)
-    {
-        cout<< arr[i];
+        int count =0;
+        // for(int i=0;i<n;i++)
+        // {
+        //     cout<<arr[i];
+        // }
+        for(int i=0;i<n;i++)
+        {
+            for(int j=0;j<n;j++)
+            {
+                if(arr[j]>arr[j+1]*arr[j])
+                {
+                    count++;
+                }
+                    
+            }
+        }
+        cout<<count;
+        
     }
 }
