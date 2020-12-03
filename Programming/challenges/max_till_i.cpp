@@ -11,3 +11,6 @@ int main()
         cout<<mx<<" ";
     }
 }
+
+// output:
+// 1 1 5 6 6
