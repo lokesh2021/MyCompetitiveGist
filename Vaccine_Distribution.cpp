@@ -11,7 +11,6 @@ int main()
         cin >> n >> d;
         ll int risk = 0;
         ll int no_risk = 0;
-
         for (int i = 0; i < n; i++)
         {
             cin >> people;
