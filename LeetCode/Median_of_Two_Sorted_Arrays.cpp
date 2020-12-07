@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    vector<int> nums1 = {1,3,4};
+    vector<int> nums1 = {1,3};
     vector<int> nums2 = {2};
     vector<int> hash;
     auto i=0,j=0;
@@ -19,12 +19,24 @@ int main()
            j++;
        }
     }
-    int sum=0;
-    for(int i=0;i<hash.size()-1;i++)
+    // for(int i=0;i<hash.size()-1;i++)
+    // {
+    //     cout<<hash[i];
+    // }
+    double res;
+    if((hash.size()-1)%2==0)
     {
-        sum+=hash[i];
+        double m1 = hash[((hash.size()-1)/2)-1];
+        double m2 = hash[((hash.size()-1)/2)];
+        // cout<<hash.size()<<m1<<m2<<endl;
+        res = (m1+m2)/2;
+        cout<<res;        
     }
-    double final = sum/(hash.size()-1);
-    cout<<final;
+    else
+    {
+        res = hash[((hash.size()-1)/2)];
+        cout<<res;
+    }
+
 
 }
