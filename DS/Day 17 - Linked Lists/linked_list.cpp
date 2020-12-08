@@ -9,7 +9,7 @@ class Node
         Node *next;
 };
 
-//head_ref is pointer of a pointer 
+//head_ref is the initial pointer which is of type pointer
 void push(Node** head_ref,int new_data)
 {
     Node* new_node = new Node();    //allocating a new empty node
