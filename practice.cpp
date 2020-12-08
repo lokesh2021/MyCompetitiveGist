@@ -1,36 +1,39 @@
 #include <bits/stdc++.h>
 using namespace std; 
-#define ull unsigned long long
 
 int main()
 {
-  int t;
-    cin>>t;
-    while(t--)
+    vector<int> arr = {18,19,23,15};
+    vector<int> arr1 = arr;
+    vector<int> sd;
+    int n = 4;
+    for(auto i=0;i<n;i++)
     {
-        int n,arr[n];
-        cin>>n;
-        for(int i=0;i<n;i++)
+        int s = 0;
+        while(arr[i]!=0)
         {
-            cin>>arr[i];
+            s = s + arr[i] % 10;
+            arr[i] = arr[i] / 10;
         }
-        int count =0;
-        // for(int i=0;i<n;i++)
-        // {
-        //     cout<<arr[i];
-        // }
-        for(int i=0;i<n;i++)
+        sd.push_back(s);
+    }
+    int mx = 0;
+    for(int i=0;i<n;i++)
+    {
+        for(int j=i+1;j<n;j++)
         {
-            for(int j=0;j<n;j++)
+            if(sd[i]==sd[j])
             {
-                if(arr[j]>arr[j+1]*arr[j])
-                {
-                    count++;
-                }
-                    
+                int el =arr1[i]+arr1[j]; 
+                mx = max(mx,el);
             }
         }
-        cout<<count;
-        
     }
+    if(mx==0)
+    {
+        cout<<-1;
+    }
+    else
+        cout<<mx;
+
 }
