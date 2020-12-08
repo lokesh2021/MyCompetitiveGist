@@ -1,23 +1,47 @@
 #include <bits/stdc++.h>
 using namespace std;
-int main()
+int main ()
 {
     int t;
     cin >> t;
     while (t--)
     {
-        int n,k;
-        cin>>n>>k;
-        int a[n];
-        for(int i=1;i<=n;i++)
+        int n, k;
+        cin >> n >> k;
+
+        int arr[n], d = n-k, i = 0, flag = 1;
+
+        for (i = 0; i < n; i++)
         {
-            a[i]=i;
-        }
-        for(int i=1;i<=k;i++)
-        {
-            cout<<a[i]<<" "<<endl;
+            arr[i] = i+1;
         }
 
+        i = 0;
+        while (d--)
+        {   
+            arr[i] -= 2*arr[i];
+            if (flag == 1)
+                i += 2;
+            else
+                i -= 2;
 
+            if (i == n)
+            {
+                flag = 0;
+                i = n-1;
+            }
+            else if (i == n+1)
+            {
+                i = n-2;
+                flag = 0;
+            }
+
+        }
+        for (i = 0; i < n; i++)
+        {
+            cout << arr[i] << " ";
+        }
+        cout << endl;    
     }
-}
+    return 0;
+} 
