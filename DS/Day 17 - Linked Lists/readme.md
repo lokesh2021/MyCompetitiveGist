@@ -40,3 +40,30 @@ class Node{
         *head_ref = new_node;       // step 4
     }
 ```
+
+</br>
+
+## **Inserting the node after a given position**
+### it is a 5 step process:
+1) Check whether the previosu node is empty ,if empty exit
+2) Allocate/create an empty node (new_node)
+3) Put data into the new_node
+4) Make the next of the new_node as next of previous node
+5) move the next of previous node to new_node
+
+```cpp
+void insert_after(Node* prev_node,int new_data)
+{
+    if(prev_node == NULL)
+    {
+        cout<<"given previous node is null";
+        return;
+    }
+
+    Node* new_node = new Node();
+    new_node->data = new_data;
+    new_node->next = prev_node->next;
+    prev_node->next = new_node;
+
+}
+```
