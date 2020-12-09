@@ -13,7 +13,7 @@
 </br>
 </br>
 
-## Creation of Node
+## **Node contents**
 ```cpp
 class Node{
     public:
@@ -21,6 +21,7 @@ class Node{
         Node *next;  //link to next node where the next node is also of type node 
 }
 ```
+</br>
 
 ## **Adding a node at the front**
 ### it is a 4 step process:
