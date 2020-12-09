@@ -33,6 +33,23 @@ void insert_after(Node* prev_node,int new_data)
 
 }
 
+void append(Node** head_ref,int new_data)
+{
+    Node* new_node = new Node();
+    Node *last = *head_ref;
+    new_node->data = new_data;
+    new_node->next = NULL;
+    if(*head_ref == NULL)
+    {
+        *head_ref=new_node;
+        return;
+    }
+    while(last->next!=NULL)
+        last = last->next;
+    last->next = new_node;
+    return;
+}
+
 void display(Node *node)
 {
     while(node!=NULL)
@@ -51,5 +68,6 @@ int main()
     insert_after(head,4); //inserting node after the 1st element
     insert_after(head->next,5); //inserting node after the 1st element
     display(head);
+    append(&head,8);
     return 0;
 }
