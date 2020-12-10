@@ -51,27 +51,28 @@ void append(Node **head_ref, int new_data)
 
 void delete_key(Node **head_ref, int key)
 {
-    Node* temp = *head_ref;
-    Node* prev = NULL;
-    if(temp!=NULL && temp->data == key)
+    Node *temp = *head_ref;
+    Node *prev = NULL;
+    if (temp != NULL && temp->data == key)
     {
         *head_ref = temp->next; //changed the head
         delete temp;            //delete the old head
         return;
     }
 
-    while(temp!=NULL && temp->data!=key)    //used to track previous node
+    while (temp != NULL && temp->data != key) //used to track previous node
     {
-        prev = temp;    
+        prev = temp;
         temp = temp->next;
     }
 
-    if(temp == NULL)                //if key is not present in the LL
+    if (temp == NULL) //if key is not present in the LL
         return;
-    
-    prev->next = temp->next;        //link the temp->next to prev->next
-    delete temp;                    //free temp i.e, the key node
+
+    prev->next = temp->next; //link the temp->next to prev->next
+    delete temp;             //free temp i.e, the key node
 }
+
 
 void display(Node *node)
 {
@@ -90,9 +91,9 @@ int main()
     push(&head, 3);
     insert_after(head, 4);       //inserting node after the 1st element
     insert_after(head->next, 5); //inserting node after the 1st element
-    append(&head, 8);       //adding element at the end of LL -> 3 4 5 2 1 8
-    delete_key(&head,4);
+    append(&head, 8);            //adding element at the end of LL -> 3 4 5 2 1 8
+    delete_key(&head, 4);
     display(head);
-    
+
     return 0;
 }
