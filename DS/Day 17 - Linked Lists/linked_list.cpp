@@ -59,6 +59,18 @@ void delete_key(Node **head_ref, int key)
         delete temp;            //delete the old head
         return;
     }
+
+    while(temp!=NULL && temp->data!=key)    //used to track previous node
+    {
+        prev = temp;    
+        temp = temp->next;
+    }
+
+    if(temp == NULL)                //if key is not present in the LL
+        return;
+    
+    prev->next = temp->next;        //link the temp->next to prev->next
+    delete temp;                    //free temp i.e, the key node
 }
 
 void display(Node *node)
