@@ -1,4 +1,5 @@
-# Linked List (Easy to grasp the concept and you will struggle in the starting so keep learning it untill you find it easy)
+# Linked List 
+##### (Easy to grasp the concept once you struggle in the starting)
 ## **Basics of Linked List**
 ### **Linked List** is a collection of nodes which contains data and link to next node
 ### Linked List is created in Heap 
