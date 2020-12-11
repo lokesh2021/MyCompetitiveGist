@@ -3,8 +3,8 @@ using namespace std;
 int main()
 {
     int n = 4;
-    int arr[n] = {-1, 4, 7, 2};
-    int mx = 0;
+    int arr[n] = {-1,-2,-3,-4};
+    int mx = -2147483648;
 
     for (int i = 0; i < n; i++)
     {
@@ -21,18 +21,4 @@ int main()
 }
 
 // output:
-// 1
-// 1
-// 6
-// 12
-// 14
-// 0
-// 5
-// 11
 // 13
-// 5
-// 11
-// 13
-// 6
-// 8
-// 2
