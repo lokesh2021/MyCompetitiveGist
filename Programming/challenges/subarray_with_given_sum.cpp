@@ -9,9 +9,9 @@ int main()
     {
         cin >> a[i];
     }
-    int sum=0;
+    int sum = 0;
 
-    for (int i = 0, j = i; i < n && j <n ; i++, j++)
+    for (int i = 0, j = i; i < n && j < n; i++, j++)
     {
         sum += a[j];
         cout << sum << endl;
