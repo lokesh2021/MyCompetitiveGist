@@ -70,6 +70,6 @@
         "valarray": "cpp"
     },
     "git.ignoreLimitWarning": true,
-    "python.dataScience.jupyterServerURI": "local",
-    "C_Cpp.errorSquiggles": "Enabled"
+    "C_Cpp.errorSquiggles": "Enabled",
+    "jupyter.jupyterServerType": "local"
 }
