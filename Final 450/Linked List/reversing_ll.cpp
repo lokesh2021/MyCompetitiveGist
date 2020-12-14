@@ -17,6 +17,7 @@ void push(Node **head_ref, int new_data)
     *head_ref = new_node;        //move the head to point to the new node
 }
 
+//recursive reversing of LL
 Node *rec_rev_ll(Node **head)
 {
     Node *curr = *head;
@@ -30,7 +31,7 @@ Node *rec_rev_ll(Node **head)
     return loop;
 }
 
-//recursive reversing of LL
+//iterative method of reversing a LL
 void reverse_ll(Node **head_ref)
 {
     Node *curr = *head_ref;
@@ -45,7 +46,6 @@ void reverse_ll(Node **head_ref)
     *head_ref = prev;
 }
 
-//iterative method of reversing a LL
 void display(Node *node)
 {
     while (node != NULL)
