@@ -17,31 +17,44 @@ void push(Node **head_ref, int new_data)
     *head_ref = new_node;        //move the head to point to the new node
 }
 
-void reverse_ll(Node** head_ref)
+Node *rec_rev_ll(Node **head)
 {
-    Node *curr = *head_ref;
-    Node *prev=NULL,*next=NULL;
-    while(curr!=NULL)
-    {
-        next=curr->next;
-        curr->next=prev;
-        prev=curr;
-        curr=next;
-    }
-    *head_ref=prev;
-    
+    Node *curr = *head;
+    if (curr == NULL)
+        return 0;
+    if (curr->next == NULL)
+        return curr;
+    Node *loop = rec_rev_ll(&curr->next);
+    curr->next->next = curr;
+    curr->next = NULL;
+    return loop;
 }
 
+//recursive reversing of LL
+void reverse_ll(Node **head_ref)
+{
+    Node *curr = *head_ref;
+    Node *prev = NULL, *next = NULL;
+    while (curr != NULL)
+    {
+        next = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr = next;
+    }
+    *head_ref = prev;
+}
+
+//iterative method of reversing a LL
 void display(Node *node)
 {
     while (node != NULL)
     {
-        cout << node->data<< " " ;
+        cout << node->data << " ";
         node = node->next;
     }
-    cout<<endl;
+    cout << endl;
 }
-
 
 int main()
 {
@@ -51,10 +64,13 @@ int main()
     push(&head, 3);
     push(&head, 4);
     push(&head, 5); //now we are inserting 6 into the linked list so now linked list is 2->3->NULL
-    cout<<"Before reversing LL"<<endl;
+    cout << "Before reversing LL" << endl;
     display(head);
     reverse_ll(&head);
-    cout<<"After reversing LL"<<endl;
+    cout << "After reversing LL" << endl;
+    display(head);
+    reverse_ll(&head);
+    cout << "After reversing LL in recursion" << endl;
     display(head);
     return 0;
 }
