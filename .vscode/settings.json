@@ -67,7 +67,8 @@
         "thread": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "xutility": "cpp"
     },
     "git.ignoreLimitWarning": true,
     "C_Cpp.errorSquiggles": "Enabled",
