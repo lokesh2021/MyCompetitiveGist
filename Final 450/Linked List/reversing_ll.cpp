@@ -18,17 +18,17 @@ void push(Node **head_ref, int new_data)
 }
 
 //recursive reversing of LL
-Node *rec_rev_ll(Node **head)
+Node *recReverse(Node *head)
 {
-    Node *curr = *head;
-    if (curr == NULL)
-        return 0;
-    if (curr->next == NULL)
-        return curr;
-    Node *loop = rec_rev_ll(&curr->next);
-    curr->next->next = curr;
-    curr->next = NULL;
-    return loop;
+    if (head == NULL || head->next == NULL)
+    {
+        return head;
+    }
+    Node *chotaHead = recReverse(head->next);
+
+    head->next->next = head;
+    head->next = NULL;
+    return chotaHead;
 }
 
 //iterative method of reversing a LL
@@ -69,8 +69,8 @@ int main()
     reverse_ll(&head);
     cout << "After reversing LL" << endl;
     display(head);
-    reverse_ll(&head);
     cout << "After reversing LL in recursion" << endl;
+    head = recReverse(head);
     display(head);
     return 0;
 }
