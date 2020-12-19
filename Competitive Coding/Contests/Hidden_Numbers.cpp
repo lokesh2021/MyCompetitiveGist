@@ -1,3 +1,6 @@
+//https://www.codechef.com/UWCOI21/problems/UWCOI21A
+//couldn't solve the solution due to time constraint
+//below solution is wrong
 #include <bits/stdc++.h>
 using namespace std;
 int main()
@@ -14,23 +17,14 @@ int main()
         {
             arr[i] = i;
         }
-        int low = 0;
-        int high = n - 1;
-        while (low <= high)
+        int H[n];
+        for (int i = 0; i < n; i++)
         {
-            if (arr[low] * arr[high] == k)
+            if (H[arr[i] / n] != 0)
             {
-                cout << low << " " << high << endl;
-                return 0;
+                cout << arr[i] << "+" << n - arr[i] << "=" << n << endl;
             }
-            else if (arr[low] * arr[high] > k)
-            {
-                high--;
-            }
-            else
-            {
-                low++;
-            }
+            H[arr[i++]];
         }
     }
 }
