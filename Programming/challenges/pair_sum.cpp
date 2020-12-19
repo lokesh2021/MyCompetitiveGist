@@ -3,19 +3,19 @@ using namespace std;
 
 int main()
 {
-    int arr[] = {2, 3, 7, 11, 14, 16, 20, 21};
-    int n = 8;
-    int k = 31;
+    int arr[] = {1};
+    int n = 1;
+    int k = 1;
     int low = 0;
     int high = n - 1;
     while (low < high)
     {
-        if (arr[low] + arr[high] == k)
+        if (arr[low] * arr[high] == k)
         {
             cout << low << " " << high << endl;
             return 0;
         }
-        else if (arr[low] + arr[high] > k)
+        else if (arr[low] * arr[high] > k)
         {
             high--;
         }
@@ -25,6 +25,7 @@ int main()
         }
     }
     cout << "false";
+    return 0;
 }
 
 // output:
