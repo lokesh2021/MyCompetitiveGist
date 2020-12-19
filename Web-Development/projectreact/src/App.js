@@ -3,7 +3,7 @@ import Hello from "./sayHello";
 import Tweet from "./Tweet";
 function App() {
   return (
-    <div>
+    <div className="app">
       <h1>Hello React</h1>
       <Hello />
       <Tweet/>
