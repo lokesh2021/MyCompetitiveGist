@@ -68,7 +68,9 @@
         "typeindex": "cpp",
         "typeinfo": "cpp",
         "valarray": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "xhash": "cpp",
+        "xstring": "cpp"
     },
     "git.ignoreLimitWarning": true,
     "C_Cpp.errorSquiggles": "Enabled",
