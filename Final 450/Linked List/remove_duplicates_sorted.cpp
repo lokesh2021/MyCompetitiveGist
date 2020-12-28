@@ -8,6 +8,10 @@ public:
     Node *next;
 };
 
+void removeDuplicates(Node *head)
+{
+}
+
 void push(Node **head, int new_data)
 {
     Node *new_node = new Node();
