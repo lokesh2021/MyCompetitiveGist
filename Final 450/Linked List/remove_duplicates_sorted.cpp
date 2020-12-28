@@ -10,6 +10,25 @@ public:
 
 void removeDuplicates(Node *head)
 {
+    Node *curr = head;
+    Node *next_next; //pointer to store the next pointer of a node to be deleted
+
+    if (curr == NULL)
+        return;
+
+    while (curr->next != NULL)
+    {
+        if (curr->data == curr->next->data)
+        {
+            next_next = curr->next->next;
+            free(curr->next);
+            curr->next = next_next;
+        }
+        else
+        {
+            curr = curr->next;
+        }
+    }
 }
 
 void push(Node **head, int new_data)
@@ -39,4 +58,9 @@ int main()
     push(&head, 11);
     cout << "Linked list before duplicate removal ";
     printLL(head);
+    removeDuplicates(head);
+
+    cout << "\nLinked list after duplicate removal ";
+    printLL(head);
+    return 0;
 }
