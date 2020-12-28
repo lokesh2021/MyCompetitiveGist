@@ -64,3 +64,7 @@ int main()
     printLL(head);
     return 0;
 }
+
+// output:
+// Linked list before duplicate removal ->11->11->11->13->13->20
+// Linked list after duplicate removal ->11->13->20
