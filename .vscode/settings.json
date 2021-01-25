@@ -75,5 +75,6 @@
     },
     "git.ignoreLimitWarning": true,
     "C_Cpp.errorSquiggles": "Enabled",
-    "jupyter.jupyterServerType": "local"
+    "jupyter.jupyterServerType": "local",
+    "python.pythonPath": "C:\\Users\\Acer\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe"
 }
