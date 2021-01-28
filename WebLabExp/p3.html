@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1">Text-Increasing</p>
+    <p id="p2">Text-Shringing</p>
+  </body>
+  <script>
+    var size = 5;
+    var wait = setInterval(TextIncreasing, 100);
+    function TextIncreasing() {
+      if (size < 51) {
+        size = size + 1;
+        document.getElementById("p1").style.fontSize = size + "pt";
+        document.getElementById("p1").style.color = "red";
+        document.getElementById("p2").style.visibility = "hidden";
+      } else {
+        clearInterval(wait);
+        wait = setInterval(TextShrink, 100);
+      }
+    }
+    function TextShrink() {
+      if (size > 5) {
+        size = size - 1;
+        document.getElementById("p1").style.visibility = "hidden";
+        document.getElementById("p2").style.visibility = "visible";
+        document.getElementById("p2").style.fontSize = size + "pt";
+        document.getElementById("p2").style.color = "blue";
+      }
+    }
+  </script>
+</html>
