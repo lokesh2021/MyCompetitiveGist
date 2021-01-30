@@ -71,7 +71,10 @@
         "xutility": "cpp",
         "xhash": "cpp",
         "xstring": "cpp",
-        "xiosbase": "cpp"
+        "xiosbase": "cpp",
+        "charconv": "cpp",
+        "optional": "cpp",
+        "string_view": "cpp"
     },
     "git.ignoreLimitWarning": true,
     "C_Cpp.errorSquiggles": "Enabled",
