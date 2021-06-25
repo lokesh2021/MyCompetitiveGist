@@ -26,6 +26,7 @@ public:
     int Length();
     bool IsSorted();
     void RemoveDuplicates();
+    void ReversingLinks();
 };
 
 LinkedList::LinkedList(int A[], int n)
@@ -189,19 +190,36 @@ void LinkedList::RemoveDuplicates()
         }
     }
 }
+
+void LinkedList::ReversingLinks()
+{
+    Node *p = first;
+    Node *q = NULL;
+    Node *r = NULL;
+    while (p != NULL)
+    {
+        r = q;
+        q = p;
+        p = p->next;
+        q->next = r;
+    }
+    first = q;
+}
 int main()
 {
-    int A[] = {3, 1, 1, 1, 17, 20};
+    int A[] = {3, 5, 8, 15, 17, 20};
     LinkedList l(A, 6);
     l.Display();
     //l.Insert(3, 9);
     //l.Display();
     //l.Delete(4);
     //l.Display();
-    l.InsertInSortedLL(18);
-    l.Display();
-    cout << l.IsSorted() << endl;
-    l.RemoveDuplicates();
+    //l.InsertInSortedLL(18);
+    //l.Display();
+    //cout << l.IsSorted() << endl;
+    //l.RemoveDuplicates();
+    //l.Display();
+    l.ReversingLinks();
     l.Display();
 
     return 0;
