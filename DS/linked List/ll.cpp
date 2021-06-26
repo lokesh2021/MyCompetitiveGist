@@ -27,6 +27,7 @@ public:
     bool IsSorted();
     void RemoveDuplicates();
     void ReversingLinks();
+    Node *Head();
 };
 
 LinkedList::LinkedList(int A[], int n)
@@ -205,22 +206,76 @@ void LinkedList::ReversingLinks()
     }
     first = q;
 }
+
+Node *LinkedList::Head()
+{
+    return first;
+}
+
+Node *MergeSortedLL(Node *p1, Node *p2)
+{
+    Node *dummyNode = NULL;
+    Node *p3 = dummyNode;
+
+    while (p1 != NULL && p2 != NULL)
+    {
+        if (p1->data < p2->data)
+        {
+            p3->next = p1;
+            p1 = p1->next;
+        }
+        else
+        {
+            p3->next = p2;
+            p2 = p2->next;
+        }
+        p3 = p3->next;
+    }
+
+    if (p1 != NULL)
+        p3->next = p1;
+
+    if (p2 != NULL)
+        p3->next = p2;
+    
+    cout<<"merge complete";
+
+    return dummyNode;
+}
+
+void display(Node *node)
+{
+    while (node != NULL)
+    {
+        cout << node->data<< "-> " ;
+        node = node->next;
+    }
+    cout<<"Null"<<endl;
+}
+
 int main()
 {
     int A[] = {3, 5, 8, 15, 17, 20};
-    LinkedList l(A, 6);
-    l.Display();
-    //l.Insert(3, 9);
-    //l.Display();
-    //l.Delete(4);
-    //l.Display();
-    //l.InsertInSortedLL(18);
-    //l.Display();
-    //cout << l.IsSorted() << endl;
-    //l.RemoveDuplicates();
-    //l.Display();
-    l.ReversingLinks();
-    l.Display();
+    int B[] = {1, 2, 4, 6};
+    LinkedList l1(A, 6);
+    LinkedList l2(B, 4);
+    l1.Display();
+    l2.Display();
+    l1.Insert(3, 9);
+    l1.Display();
+    l1.Delete(4);
+    l1.Display();
+    l1.InsertInSortedLL(18);
+    l1.Display();
+    cout << l1.IsSorted() << endl;
+    l1.RemoveDuplicates();
+    l1.Display();
+    l1.ReversingLinks();
+    l1.Display();
+    // Node *n1 = l1.Head();
+    // Node *n2 = l2.Head();
+    // Node *res = MergeSortedLL(n1, n2);
+    // display(res);
 
     return 0;
 }
