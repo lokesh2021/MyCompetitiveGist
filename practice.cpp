@@ -17,10 +17,11 @@ int NumberOfBalls(int arr[])
 
 int main()
 {
-    int arr1[] = {1, 2, 7, 13}; 
-	 
+    int arr1[] = {1, 2, 7, 13};
+
     int res;
     res = NumberOfBalls(arr1);
     cout<<res;
+
     return 0;
 }
