@@ -43,9 +43,51 @@ char *Convert(char *infix)
         postfix[j++] = stk.top();
         stk.pop();
     }
-
     postfix[j] = '\0';
     return postfix;
+}
+
+int Eval(char *postfix)
+{
+    stack<int> stk;
+    int i, x1, x2, r;
+    for (i = 0; postfix[i] != '\0'; i++)
+    {
+        if (isOperand(postfix[i]))
+        {
+            stk.push(postfix[i]-48);
+        }
+        else
+        {
+            x2 = stk.top();
+            stk.pop();
+            x1 = stk.top();
+            stk.pop();
+            switch (postfix[i])
+            {
+            case '+':
+                r = x1 + x2;
+                stk.push(r);
+                break;
+
+            case '-':
+                r = x1 - x2;
+                stk.push(r);
+                break;
+
+            case '*':
+                r = x1 * x2;
+                stk.push(r);
+                break;
+
+            case '/':
+                r = x1 / x2;
+                stk.push(r);
+                break;
+            }
+        }
+    }
+    return stk.top();
 }
 
 int main()
@@ -53,7 +95,7 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    char infix[] = "a+b*c";
-    cout << Convert(infix) << endl;
+    char infix[] = "234*+82/-";
+    cout << Eval(infix) << endl;
     return 0;
 }
