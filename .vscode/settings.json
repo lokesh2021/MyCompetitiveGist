@@ -74,7 +74,8 @@
         "xiosbase": "cpp",
         "charconv": "cpp",
         "optional": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "ciso646": "cpp"
     },
     "git.ignoreLimitWarning": true,
     "C_Cpp.errorSquiggles": "Enabled",
