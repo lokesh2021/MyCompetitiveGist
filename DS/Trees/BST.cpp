@@ -22,8 +22,8 @@ public:
     void inorder(Node *p);
     Node *search(int x);
     Node *Delete(Node *p, int x);
-    Node* InPre(Node* p);
-    Node* InSucc(Node* p);
+    Node *InPre(Node *p);
+    Node *InSucc(Node *p);
 };
 
 BST::~BST()
@@ -105,7 +105,7 @@ Node *BST::search(int x)
 Node *BST::Delete(Node *p, int x)
 {
     Node *q;
-    if (!p)
+    if (p == nullptr)
         return nullptr;
     if (p->lchild == nullptr && p->rchild == nullptr)
     {
@@ -137,15 +137,19 @@ Node *BST::Delete(Node *p, int x)
     return p;
 }
 
-Node* BST::InPre(Node *p) {
-    while (p && p->rchild != nullptr){
+Node *BST::InPre(Node *p)
+{
+    while (p && p->rchild != nullptr)
+    {
         p = p->rchild;
     }
     return p;
 }
- 
-Node* BST::InSucc(Node *p) {
-    while (p && p->lchild != nullptr){
+
+Node *BST::InSucc(Node *p)
+{
+    while (p && p->lchild != nullptr)
+    {
         p = p->lchild;
     }
     return p;
