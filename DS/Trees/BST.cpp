@@ -17,14 +17,30 @@ public:
     BST() { root = nullptr; };
     ~BST();
     Node *getRoot() { return root; };
+    int Height(Node *p);
     void insert(int x);
     void inorder(Node *p);
-
     Node *search(int x);
+    Node *Delete(Node *p, int x);
+    Node* InPre(Node* p);
+    Node* InSucc(Node* p);
 };
 
 BST::~BST()
 {
+}
+
+int BST::Height(Node *p)
+{
+    int x;
+    int y;
+    if (p == nullptr)
+    {
+        return 0;
+    }
+    x = Height(p->lchild);
+    y = Height(p->rchild);
+    return x > y ? x + 1 : y + 1;
 }
 
 void BST::insert(int x)
@@ -86,6 +102,55 @@ Node *BST::search(int x)
     return nullptr;
 }
 
+Node *BST::Delete(Node *p, int x)
+{
+    Node *q;
+    if (!p)
+        return nullptr;
+    if (p->lchild == nullptr && p->rchild == nullptr)
+    {
+        if (p == root)
+            root = nullptr;
+        delete p;
+        return nullptr;
+    }
+
+    if (x < p->data)
+        p->lchild = Delete(p->lchild, x);
+    else if (x > p->data)
+        p->rchild = Delete(p->rchild, x);
+    else
+    {
+        if (Height(p->lchild) > Height(p->rchild))
+        {
+            q = InPre(p->lchild);
+            p->data = q->data;
+            p->lchild = Delete(p->lchild, q->data);
+        }
+        else
+        {
+            q = InSucc(p->rchild);
+            p->data = q->data;
+            p->rchild = Delete(p->rchild, q->data);
+        }
+    }
+    return p;
+}
+
+Node* BST::InPre(Node *p) {
+    while (p && p->rchild != nullptr){
+        p = p->rchild;
+    }
+    return p;
+}
+ 
+Node* BST::InSucc(Node *p) {
+    while (p && p->lchild != nullptr){
+        p = p->lchild;
+    }
+    return p;
+}
+
 int main()
 {
     BST bst;
@@ -96,10 +161,10 @@ int main()
     bst.insert(30);
 
     bst.inorder(bst.getRoot());
-    cout<<endl;
+    cout << endl;
     Node *res = bst.search(7);
     if (res)
-        cout << "Element exists " <<res->data << endl;
+        cout << "Element exists " << res->data << endl;
     else
         cout << "Element Not found" << endl;
 }
