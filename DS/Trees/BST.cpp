@@ -15,7 +15,6 @@ private:
 
 public:
     BST() { root = nullptr; };
-    ~BST();
     Node *getRoot() { return root; };
     int Height(Node *p);
     void insert(int x);
@@ -24,6 +23,7 @@ public:
     Node *Delete(Node *p, int x);
     Node *InPre(Node *p);
     Node *InSucc(Node *p);
+    ~BST();
 };
 
 BST::~BST()

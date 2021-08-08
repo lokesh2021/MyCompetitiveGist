@@ -1,27 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int NumberOfBalls(int arr[])
+void solve()
 {
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int sum1=0;
-    for(int i=0;i<n;i++){
-        sum1+=arr[i];
-    }
-    int sum2=0;
-    for(int i=1;i<=n;i++){
-        sum2+=(i*i);
-    }
-    return sum2-sum1;
+    
 }
 
 int main()
 {
-    int arr1[] = {1, 2, 7, 13};
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-    int res;
-    res = NumberOfBalls(arr1);
-    cout<<res;
-
-    return 0;
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        solve();
+    }
 }
