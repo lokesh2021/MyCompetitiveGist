@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inputs</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <br>
+    <div class="form-group">
+      <label for="usr">Name:</label>
+      <input type="text" class="form-control" id="usr">
+      <label for="comment">Comment:</label>
+      <textarea class="form-control" id="comment" rows="5"></textarea>
+      <div class="checkbox">
+        <label for=""><input type="checkbox" name="" id="">Option 1</label>
+      </div>
+      <div class="checkbox disabled">
+        <label for=""><input type="checkbox" disabled name="" id="">Option 2</label>
+      </div>
+      <br>
+      <br>
+      <label class="checkbox-inline"><input type="checkbox" value="">Option 1</label>
+      <label class="checkbox-inline"><input type="checkbox" value="">Option 2</label>
+      <label class="checkbox-inline"><input type="checkbox" value="">Option 3</label>
+      <br>
+      <br>
+      <div class="radio">
+        <label for=""><input type="radio" name="option" id="">Option 1</label>
+      </div>
+
+      <div class="radio">
+        <label for=""><input type="radio" name="option" id="">Option 2</label>
+      </div>
+
+      <div class="radio">
+        <label for=""><input type="radio" name="option" id="">Option 3</label>
+      </div>
+      <br>
+      <label class="radio-inline"><input type="radio" name="optradio" checked>Option 1</label>
+      <label class="radio-inline"><input type="radio" name="optradio">Option 2</label>
+      <label class="radio-inline"><input type="radio" name="optradio">Option 3</label>
+
+      <br>
+      <div class="form-group">
+        <label for="sel">Select list:</label>
+        <select class="form-control" id="sel">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        <br>
+        <label for="sel">Select list:</label>
+        <select class="form-control" multiple id="sel">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
