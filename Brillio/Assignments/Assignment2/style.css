@@ -12,3 +12,13 @@ i {
 li{
     padding-left: 2rem;
 }
+#carouselimg
+{
+    height: 500px;
+    width: 100%;
+}
+p{
+    text-align: center;
+    font-size: medium;
+    margin-top: 1rem;
+}
