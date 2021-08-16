@@ -1,0 +1,14 @@
+.top-bar {
+  background-color: greenyellow;
+  padding: 5px;
+}
+
+i {
+  padding-right: 5px;
+}
+.search-top {
+  margin-top: 2rem;
+}
+li{
+    padding-left: 2rem;
+}
