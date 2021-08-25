@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/JavaBasics/JavaBasics.iml" filepath="$PROJECT_DIR$/JavaBasics/JavaBasics.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaSelfStudy.iml" filepath="$PROJECT_DIR$/.idea/JavaSelfStudy.iml" />
       <module fileurl="file://$PROJECT_DIR$/NonStaticMembers/NonStaticMembers.iml" filepath="$PROJECT_DIR$/NonStaticMembers/NonStaticMembers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Wrapper Classes with Auto boxing &amp; unboxing/Wrapper Classes with Auto boxing &amp; unboxing.iml" filepath="$PROJECT_DIR$/Wrapper Classes with Auto boxing &amp; unboxing/Wrapper Classes with Auto boxing &amp; unboxing.iml" />
     </modules>
   </component>
 </project>

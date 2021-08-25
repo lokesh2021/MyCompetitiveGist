@@ -8,6 +8,6 @@ public class DataTypesDemo {
 
         float f = 1.23f;
         double g = 123.456;
-        
+
     }
 }
