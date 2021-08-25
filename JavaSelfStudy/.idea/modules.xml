@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Datatypes, Literals, Variables, Type Conversion, Casting &amp; Promotion/Datatypes, Literals, Variables, Type Conversion, Casting &amp; Promotion.iml" filepath="$PROJECT_DIR$/Datatypes, Literals, Variables, Type Conversion, Casting &amp; Promotion/Datatypes, Literals, Variables, Type Conversion, Casting &amp; Promotion.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaBasics/JavaBasics.iml" filepath="$PROJECT_DIR$/JavaBasics/JavaBasics.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaSelfStudy.iml" filepath="$PROJECT_DIR$/.idea/JavaSelfStudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NonStaticMembers/NonStaticMembers.iml" filepath="$PROJECT_DIR$/NonStaticMembers/NonStaticMembers.iml" />
     </modules>
   </component>
 </project>
