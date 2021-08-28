@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Collections with Generics/Collections with Generics.iml" filepath="$PROJECT_DIR$/Collections with Generics/Collections with Generics.iml" />
       <module fileurl="file://$PROJECT_DIR$/Command Line Program/Command Line Program.iml" filepath="$PROJECT_DIR$/Command Line Program/Command Line Program.iml" />
       <module fileurl="file://$PROJECT_DIR$/Datatypes, Literals, Variables, Type Conversion, Casting &amp; Promotion/Datatypes, Literals, Variables, Type Conversion, Casting &amp; Promotion.iml" filepath="$PROJECT_DIR$/Datatypes, Literals, Variables, Type Conversion, Casting &amp; Promotion/Datatypes, Literals, Variables, Type Conversion, Casting &amp; Promotion.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaBasics/JavaBasics.iml" filepath="$PROJECT_DIR$/JavaBasics/JavaBasics.iml" />
