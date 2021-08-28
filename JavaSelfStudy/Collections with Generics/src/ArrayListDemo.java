@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ArrayListDemo {
     public static void main(String[] args) {
@@ -7,9 +8,14 @@ public class ArrayListDemo {
         list.add(4);
         list.add(34);
 
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+        System.out.println("Array list: "+list);
+
+        Iterator<Integer> itr = list.iterator();
+        while (itr.hasNext()){
+            System.out.println(itr.next());
+            itr.remove();
         }
+        System.out.println("After removing: "+list);
 
     }
 }
